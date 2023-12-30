@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploring Everything about function</title>
+  </head>
+  <body>
+
+    <h1 id="func"></h1>
+
+    <button id="btn" onclick="show()">Click to change</button>
+    <button id="btn1" onclick="hide()">Click to hide</button>
+    <script>
+
+document.querySelector('#func').textContent = 'This is a heading';
+
+function show(){
+    document.querySelector('#func').textContent = 'It is changed by clicking on button by invoking the function';
+    document.getElementById('func').style.color = 'royalblue';
+    document.getElementById('func').style.fontSize = '27px';
+    document.querySelector('#func').style.display = 'block';
+}
+function hide(){
+    document.querySelector('#func').textContent = 'It is changed by clicking on button by invoking the function';
+    document.getElementById('func').style.color = 'royalblue';
+    document.getElementById('func').style.fontSize = '27px';
+    document.querySelector('#func').style.display = 'none';
+}
+
+document.querySelector('#btn').style.padding = '7px';
+document.querySelector('#btn').style.border = 'none';
+document.querySelector('#btn').style.background = 'green';
+document.querySelector('#btn').style.color = '#fff';
+
+
+
+
+
+document.querySelector('#btn1').style.padding = '7px';
+document.querySelector('#btn1').style.border = 'none';
+document.querySelector('#btn1').style.background = 'green';
+document.querySelector('#btn1').style.color = '#fff';
+
+      //     let age = 21;
+      //     console.log(`Your age is ${age}`);
+      //      age = 22;
+      //     console.log(`Your age is ${age}`);
+      //  age = 24;
+      //     console.log(`Your age is ${age}`);
+
+      // Creating function to optimise our Above code
+      let age = 21;
+      function Age() {
+        console.log(`Your age is ${age}`);
+      }
+      Age(); //Output -- 21
+
+      age = 22;
+      Age(); //Output -- 22
+
+      age = 24;
+      Age(); //Output -- 24
+
+
+      //Creating function which can return the value
+let name ;
+      function Returns(){
+name = "Govind";
+return name;
+      }
+
+      console.log(Returns());  //Output = Govind
+
+     let take = Returns();
+     console.log(take);  //Output = Govind
+
+
+    //  Another Function Creation which will return something
+
+    function Dicision(){
+      let age = eval(prompt('Enter your age'));
+      if(age === undefined){
+        return 'Aap Avtar hain';
+      }
+      if(age >=18){
+        return 'You can Drive the car';
+      }
+      else{
+        return 'Work hard in Smart way';
+      }
+    }
+   console.log(Dicision());
+
+
+   //Creating function with paramenters and return type
+   let myName = prompt('Please tell me your name');
+   let herename = prompt('please tell me her name');
+   function paramenters( myName , herename){
+let combine = myName +' ' + herename;
+return combine;
+   }
+   console.log(paramenters(myName , herename));
+    </script>
+  </body>
+</html>

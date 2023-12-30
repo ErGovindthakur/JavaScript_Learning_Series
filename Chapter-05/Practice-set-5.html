@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Discount at metro ticket based on Age , Gender</title>
+</head>
+<body>
+    <script>
+        let Age = eval(prompt('Enter your Age'));
+        //console.log(Age);
+        let Gender = prompt('Enter you Gender');
+let finalDiscount =0;
+         if(Age <= 5){
+console.log("Free travel");
+finalDiscount = 100;
+        }
+
+
+       else if(Gender === 'Female'){
+            console.log('You have got 50% Discount');
+            finalDiscount = 50;
+        }
+       
+        else if(Age >= 6 && Age <= 8){
+console.log("You have to pay half of the ticket");
+finalDiscount = 50;
+        }
+        else if(Age >= 65){
+             console.log("You have discount of 30% off");
+             finalDiscount = 30;
+        }
+       else{
+        finalDiscount = 0;
+       }
+      console.log(`Your final Discount is ${finalDiscount}`)
+    </script>
+</body>
+</html>

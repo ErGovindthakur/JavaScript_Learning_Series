@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring loops in javascript</title>
+</head>
+<body>
+    <h1 id="talk"></h1>
+    <p class="trail"></p>
+    <h3 class="talks"></h3>
+    <h3 class="nums"></h3>
+    <button type="button" onclick="show()">Show-Table</button>
+    <button type="button" onclick="Hide()">Hide-Table</button>
+    <br>
+    <script>
+document.querySelector('#talk').textContent = "Table printing in JavaScript by using while loop on html page";
+        let num;
+   function table(){
+    //While loop working principle
+     num = 2;
+        while(num <= 20){
+            console.log(num);
+            document.write(num);
+            num = num + 2;
+            document.write("<br />");
+        }
+   }
+        console.log(`Final value of the given number ${num}`);
+       function show(){
+        document.querySelector('.trial').textContent = table();
+        document.querySelector('.trail').style.display = 'block';
+       }
+       function Hide(){
+       document.querySelector('.trail').style.display = 'none';
+       }
+
+       //Another while loop example
+       let assum = 0;    //Intialization
+
+       while(assum <= 1){    //Condition
+        console.log(assum);
+        assum = Math.random() * 2;   //Updation
+       }
+       console.log(`Final value of assum is ${assum}`);
+       document.querySelector('.talks').innerHTML = `Assume value is ${assum}`;
+
+//Do while loop Exploration
+let nums = 2;
+do{
+    console.log(nums);
+    nums = nums + 2;
+}
+while(nums <=20);
+console.log(`Final value of nums is ${nums}`);
+document.querySelector('.nums').innerHTML = `Final value of nums is ${nums} By using do While loop`;
+
+
+//Exploring for loop by using exactly above example
+let count = 1;
+let tab = 3
+let result;
+for(result =3; result <= 30; result = result+3){
+    console.log(` ${tab} *  ${count} = ${result}`);
+    count++;
+}
+console.log(`Final value of the given number ${result}`);
+
+
+//Exploring the accumulator pattern in loop
+
+let array = [1,4,5,6,9];
+let sum = 0;
+for(let index = 0 ; index < array.length; index++){
+    sum += array[index];
+}
+console.log(`Sum of the given array is ${sum}`);
+    </script>
+</body>
+</html>

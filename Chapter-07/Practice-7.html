@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's practice the concept of an object</title>
+</head>
+<body>
+    <script>
+        // Q) 1-- Create an object to represent product of Myntra
+let delivery_time = eval(prompt('Enter the delivery time'));
+        let product = {
+            company : 'Gopro',
+            item : 'jacket', 
+            price : 99999,
+            diameter : 'Square',
+            delivery_time,
+        }
+        console.log(product);
+        console.log(product['company']);
+        console.log(product['item']);
+        console.log(product.price);
+        product.value = 'High';
+        console.log(product);
+        delete product.diameter;
+        console.log(product);
+
+
+        // Q) 2-- Create an Object with two refrences and log changes to one object by changing the other one
+
+        let refrences = {
+            name : 'Ajay',
+            age : 19,
+        }
+        let obj = refrences;
+        console.log(`The name of person is ${refrences.name} and the age is ${obj.age}`);
+        refrences.name ="Vijay";
+        refrences.age = 21;
+        console.log(`The name of person is ${obj.name} and the age is ${obj.age}`);
+
+        // Q) 3-- Use bracket [] notation to display delivery time
+
+console.log(product.delivery_time);
+console.log( ` The delivery_time is ${product['delivery_time']} December 2024`);
+
+//Q) 4-- Give an object use de-structure to create two variable Eg message and status
+
+let greeting = {
+    message : 'Good job Er Govind Thakur',
+    status : 'Mission completed',
+}
+let {message , status} =greeting;
+console.log(message);
+console.log(status);
+
+// Q) 5-- Add function isIdentical to compare two product object 
+
+let product1 = {
+    item : 'cotton-shirt',
+}
+let product2 = {
+    item : 'cotton-shirt',
+}
+function compare(){
+    let comparision = product1 == product2;
+    let result = comparision;
+    return result;
+}
+console.log(compare());
+console.error("This is absolutely right ");
+    </script>
+</body>
+</html>

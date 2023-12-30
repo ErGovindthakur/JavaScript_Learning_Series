@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM local-storage , JSON practice set</title>
+   <style>
+    .js-even{
+        background-color: brown;
+    }
+    .js-odd{
+        background-color: chartreuse;
+    }
+   </style>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+
+<button id="mybtn" onclick="btnpress()">0</button>
+    <script>
+    // Q) 1 Give the msg of Good Morning , Afternoon and noon
+        function dogreeting(){
+let date = new Date();
+console.log(date);
+let hours = date.getHours();
+console.log(hours);
+let person_name = prompt('Enter the naem');
+let heading = document.querySelector('#greeting');
+if(hours >5 &&hours < 12){
+heading.innerHTML  = `Good Morning ${person_name}`;
+}
+else if(hours >12 && hours < 18){
+    heading.innerHTML = `Good Afternoon  ${person_name}`;
+}
+else{
+    heading.innerHTML = `Good Night ${person_name}`;
+}
+        }
+        dogreeting();
+
+// Q) 2 and 3) both are included
+        let noOftiemclicked = '0';
+function btnpress(){
+    noOftiemclicked++;
+update();
+}
+
+
+function update(){
+    let button =  document.querySelector('#mybtn');
+   button.innerHTML = noOftiemclicked;
+   if (noOftiemclicked % 2== 0){
+    button.classList.remove('js-odd');
+    button.classList.add('js-even');
+   }
+   else{
+    button.classList.add('js-odd');
+    button.classList.remove('js-even');
+   }
+}
+    </script>
+</body>
+</html>

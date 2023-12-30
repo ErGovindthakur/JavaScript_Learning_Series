@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 is totaly based on (JavaScript - Variables)</title>
+</head>
+<body>
+<!-- The way to define the variable -->
+<h1 id="total"></h1>
+<script>
+    let PI = 3.14;
+    let radius = 5;
+    document.querySelector('#total').textContent = `Area = ${PI * radius * radius}`;
+    console.log(PI * radius * radius );
+</script>
+
+
+<!-- Difference btw var , const and let -->
+<script>
+
+    // Example of var
+    var myName = "Govind";
+    console.log(myName);
+    {
+myName = "Govind Thakur" ;
+console.log(myName);
+    }
+
+
+    // Example of let
+    let myAge = 18;
+    console.log(myAge);
+    {
+        myAge = 19;
+        console.log(myAge); //You can assign it again and again
+    }
+
+    //Example of const
+    const iAm = "Engineer";
+    console.log(iAm);
+  try {
+        iAm = "Doctor"; //Here Assinging this again is not allowed
+        console.log(iAm);
+    }
+    catch{
+        throw("Matter not");
+    }
+    finally{
+        console.log("It's okay but not allowed");
+    }
+</script>
+
+    <script>
+        console.log(myName);
+        console.log(myAge);
+        let welcomemsg = "Hello Friends";   /*Variable intialization + declaration*/
+        console.log(welcomemsg);    //Output = 'Hello Friends'
+
+//Final Myntra Bag amount using variable
+
+
+let bagValue = Math.round(((155999 - (10/100 *155999)) - 272 + (2499 - (41/100 * 2499))-29 +25 + 20 ) * 118/100);
+let bagsummary = `Your final Myntra Bag amount is ₹${bagValue}`;
+console.log(bagsummary);
+
+//Value updation in js
+
+let name = "Govind";
+name += " Thakur ";
+console.log(name);
+let number = prompt("Enter your number");
+let solve = parseInt(number);
+let myNum = 9 + solve;
+console.log(myNum);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This practice will be fully based on variable testing</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <script>
+        // Q) 1 + Q) 2-- Save your name in a variable inside the script tag and display it into your page 
+
+const myName = "Govind Thakur";
+document.querySelector('#name').textContent = `I am the richest person in the world and, My name is ${myName}`;
+
+// Q) 3 + Q) 4 + Q) 5-- Calculate the cost of Myntra Bag in a variable and also show it in console and also calculate GST as a constant
+
+
+const GSTpercentage = 9;
+let bagValue = Math.round(((155999 - (10/100 *155999)) - 272 + (2499 - (41/100 * 2499))-29 +25 + 20 ) * (GSTpercentage + 100)/100);
+let bagsummary = `Your final Myntra Bag amount is ₹${bagValue}`;
+console.log(bagsummary);
+
+
+// Q) 6-- Use eval method in math to calculate with string 
+
+let strings = '45 + 45';
+console.log(eval(strings));
+console.log(eval('45 + 45')); //It is used to convert a string into a Mathematical term..
+    </script>
+</body>
+</html>

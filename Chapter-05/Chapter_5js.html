@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      This is the Chapter where we will learn all about (conditional statement )
+      in javascript
+    </title>
+  </head>
+  <body>
+    <!-- Q) 1-- What are booleans?  Ans ) Its a basic Data Type in javascript , returns always True and False-->
+
+    <script>
+      //Understanding Booleans
+
+      let doe = true;
+      console.log(typeof doe);
+      console.log(5 > 4);
+      console.log(typeof (5 > 4));
+      console.log("true"); //Here true is not a boolean it's a String here
+
+      //Understanding comparision operators
+
+      //(Greater than or less than operator in comparision)
+      console.log(5 > 5); //false
+      console.log(5 >= 5); //true
+      console.log(5 < 5); //false
+      console.log(5 <= 5); //true
+      console.log(!(5 > 5)); //true
+      //(Equality testing == and ===)
+      console.log("== Equality testing ");
+      console.log(5 == 5); //true
+      console.log(5 == "5"); //true
+      console.log("5" == "5"); //true
+
+      console.log("=== Equality testing");
+      console.log(5 === "5"); //false
+      console.log(5 === 5); //true
+      console.log("5" === "5"); //true
+
+      //(InEquality testing != and !==)
+      console.log("Enquality tesing != ");
+      console.log(5 != 5); //false
+      console.log("5" != 5); //false
+      console.log("5" != "5"); //false
+
+      console.log("Enquality tesing !== ");
+      console.log(5 !== 5); //false
+      console.log(5 !== "5"); //true
+      console.log("5" !== "5"); //false
+
+      // Note order of comparision operator is always less than Arithmetic operators
+
+      console.log(4 + 5 === 6 + 3); //true    BCz console.log(9 === 9);
+    </script>
+
+    <script>
+      // Condition testing in javaScript (if -else statement)
+
+      let age = prompt("What is your age ?");
+      let eligible = eval(age);
+      if (eligible < 18) {
+        console.log("You can't Drive");
+      } else if (eligible > 36 && eligible < 45) {
+        console.log("You can drive nice");
+      } else if (eligible > 46) {
+        console.log("testing a drive");
+      } else {
+        console.log("Check you eligibility");
+      }
+
+      //Logical operator
+      let myAge = 21;
+      if (myAge > 18 && myAge < 21) {
+        console.log("You are becoming rich day by day");
+      } else if (myAge >= 20 || myAge <= 34) {
+        console.log(
+          "You have achived all the things what you wanted to achieve"
+        );
+      } else {
+        console.log("Start learning in depth what you are learining");
+      }
+
+      //Understanding Scope in javascript
+
+      let Age = 16;
+      let usermsg;
+      if (Age < 12) {
+        usermsg = "Use a Bicycle";
+        // console.log(usermsg);
+      } else if (Age >= 16 && Age <= 24) {
+        usermsg = "Work hard on your skills";
+      } else {
+        usermsg = "you can do it";
+        // console.log(usermsg);
+      }
+      console.log(usermsg);
+    </script>
+  </body>
+</html>

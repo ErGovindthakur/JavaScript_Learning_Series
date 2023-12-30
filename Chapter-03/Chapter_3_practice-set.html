@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter - 3 parctice set</title>
+</head>
+<body>
+    <!--Q 1)  + 2)  Create a button with text click and add id and class in both button -->
+    <button type="button" id="btn1">click</button>
+    <button type="button" class="btn2">click-me</button>
+    <p id="create"></p>
+    <script>
+        // Q) 3--Create p paregraph using js
+        document.querySelector('#create').innerHTML = 'This is a paragragraph';
+        // Q) 4-- Add colors on both button which we have created above
+        document.getElementById("btn1").style.color = 'hotpink';
+        document.querySelector(".btn2").style.color = 'royalblue';
+        // Q) 5-- Add proper HTML (Done)
+
+        // Q) 6--Change title of the page via js
+
+        document.querySelector('title').innerHTML = 'I am changing the title of this page from Chapter 3 to Done';
+    </script>
+    <button type="button" id="take" onclick='alert("Thank you")'></button>
+    <button type="button" class="wish" onclick='alert("All the best")'></button>
+
+    <!-- Adding another script tag -->
+    
+
+    <script>
+function tackle(){
+    document.querySelector('#take').alert = "Thank you";
+}
+function fact(){
+    document.querySelector('.wish').alert = "All the best";
+}
+    </script>
+
+    <script>
+          // Q) 7-- Just copy the design on your page
+          const wish = document.querySelector('.wish');
+        wish.textContent = "💖  wishlist"; //Here using window + . to insert emoji in our page
+        // document.querySelector('.wish').innerHTML = 'Wishlist';
+       const take = document.querySelector('#take');
+       take.textContent ="Add Bag"
+       take.style.color ="white";
+      document.getElementById("take").style.backgroundColor = "green";
+      document.getElementById("take").style.boxShadow = "2px 2px 1px 2px #444";
+      document.getElementById("take").style.border = "none";
+    </script>
+
+    <!-- Q) 8-- Add a script tag to show the alert welcome  -->
+    <script>
+        alert("Welcome to Google Er Govind Thakur");
+    </script> 
+</body>
+</html>

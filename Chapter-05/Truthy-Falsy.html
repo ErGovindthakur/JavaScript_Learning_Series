@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Truthy and Falsy Values</title>
+</head>
+<body>
+    <script>
+
+        //All the below values are called Falsy Value
+
+        
+        let Age = 0;
+        console.log(Age);  //Output will be 0 as a Falsy value
+
+
+        let age; // = 21;
+        console.log(age);  //This will give you undefined value (As a Falsy value)
+
+
+        let Area = '';
+        console.log(Area); //Output will be Empty (   ) as a Falsy value
+
+        let vlaues = null;
+        console.log(values);  //Output will be null as a Falsy value
+
+        let nan = 5/'Ice-Cream';
+        console.log(nan); //Output is NaN (NOt a Number) as a Falsy value
+
+
+        if(age){
+            console.log('you have  a valid age');
+        }
+else{
+    console.log('Aap Avtar hain');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about DOM (Document object Model)</title>
+</head>
+<body>
+    <p id="dom"></p>
+    <div id="trail1">This is a heading</div>
+  
+    <script>
+
+        //All the below property are called DOM property
+        console.log(document.location);
+        console.log(document.title = 'All about DOM in javaScript');
+        document.querySelector('#dom').innerHTML = 'All about DOM in javaScript';
+console.log(document.domain);
+// document.getElementById('trial')[1].innerHTML = 'This is a heading';
+
+
+//Now learning about DOM method()
+let button = document.createElement('Button');
+button.innerText = 'Click me';
+document.querySelector('#dom').appendChild(button);
+
+    </script>
+</body>
+</html>

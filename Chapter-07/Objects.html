@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring objects in javascript</title>
+</head>
+<body>
+    <script>
+        let product = {
+            Company : 'Micro',
+            item : 'cotton-shirt',
+            price : 999,
+        };
+        console.log(typeof product);
+        console.log(product);
+        console.log(product.Company);
+        console.log(product.item);
+        console.log(product.price);
+        //Additional Accessment in object
+         product.Company = 'GoPro';
+         console.log(product);  //value changed
+          delete product.price;
+          console.log(product); //price will deleted
+
+          product.value = 'High';
+          console.log(product);  //Another property is added
+
+// Object inside an object
+let tell = {
+'talk-time' : 'free',
+duration : 'unlimited',
+
+name : {
+    Company : 'Gopro',
+    area : 'Mumbai',
+},
+display : function(){
+return `The result in the object is ${tell.name.Company}`;
+}
+}
+tell.display();
+let call = tell.display();
+console.log(call);
+
+//Exploring the concept of Autoboxing in Object
+
+console.log("Govind Thakur".toUpperCase());
+console.log("Govind Thakur".length);
+console.log("Govind Thakur ".repeat(2));
+console.log("Govind Thakur".replace('Govind', 'Er Govind'));
+console.log("Govind Thakur".repeat(2));
+
+//Exploring the concept of object refrence
+
+let x ={name : 'Govind'};
+console.log(x.name);
+let y = x;
+console.log(`The value of x = ${x.name} and the value of y = ${y.name}`);
+y.name = 'Er Govind Thakur';
+console.log(`The value of x = ${x.name} and the value of y = ${y.name}`);
+    </script>
+</body>
+</html>

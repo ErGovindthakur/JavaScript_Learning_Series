@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat-Ball-Stump (Game)</h1>
+    <button  onclick="console.log('You have chossen Bat');
+    let randomNumber = Math.random() *3;
+    // let randomNumber = eval(prompt('Enter the number'));
+    let ComputerChoice;
+    if(randomNumber > 0 && randomNumber <= 1 ){
+        ComputerChoice = 'Bat';
+        // console.log('Computer Choice is Bat');
+    }
+    else if(randomNumber>1 && randomNumber<=2){
+        ComputerChoice = 'Ball';
+// console.log('Computer Choice Ball');
+    }
+    else {
+        ComputerChoice = 'Stump';
+// console.log('Computer Choice Stump');
+    }
+    // console.log(`Computer Choice is ${ComputerChoice}`);
+
+    let result;
+    if(ComputerChoice === 'Ball'){
+        result='You won';
+    }
+    else if(ComputerChoice === 'Bat'){
+       result = 'It\'s a tie Match';
+    }
+    else if(ComputerChoice === 'Stump'){
+       result = 'Computer won';
+    }
+    alert(`You have chossen Bat :  Computer choice is ${ComputerChoice} So ${result}`);
+    ">Bat</button>
+
+
+
+<!-- Ball Choice is started from here -->
+
+
+    <button onclick="console.log('You have chossen Ball');
+    let AnyNum = Math.random() * 3;
+    let OtherChoice  ;
+    if(AnyNum>0 && AnyNum <=1){
+     OtherChoice = 'Bat';
+    }
+    else if(AnyNum>1 && AnyNum <=2){
+     OtherChoice = 'Ball';
+    }
+   else if(AnyNum>2 && AnyNum <=3){
+     OtherChoice = 'Stump';
+    }
+
+
+    //Result Time
+
+    let Result ;
+    if(OtherChoice == 'Bat'){
+        Result = 'Others won';
+    }
+    if(OtherChoice == 'Ball'){
+        Result = 'Match tie';
+    }
+    if(OtherChoice == 'Stump'){
+        Result = 'You won';
+    }
+
+    //Announcement of result
+    alert(` you have chosen Ball and OtherChoice is ${OtherChoice} so Result is -- ${Result}`);
+    " >Ball</button>
+
+
+<!-- Let's play with Stumps -->
+    <button onclick="console.log('You have chossen Stump');
+    let AutoNum = Math.random() * 3;
+    let RandomChoice  ;
+    if(AutoNum>0 && AutoNum <=1){
+     RandomChoice = 'Bat';
+    }
+   else if(AutoNum>1 && AutoNum <=2){
+     RandomChoice = 'Ball';
+    }
+  else if(AutoNum>2 && AutoNum <=3){
+     RandomChoice = 'Stump';
+    }
+   
+
+
+    //Result Time
+
+    let Parinam ;
+    if(RandomChoice == 'Bat'){
+        Parinam = 'you won';
+    }
+    if(RandomChoice == 'Ball'){
+        Parinam = 'Others won';
+    }
+    if(RandomChoice == 'Stump'){
+        Parinam = 'Match tie';
+    }
+  
+
+    //Announcement of result
+    alert(` you have chosen Stumps and OtherChoice is ${RandomChoice} so Result is -- ${Parinam}`);
+    " 
+    >Stump</button>
+</body>
+</html>

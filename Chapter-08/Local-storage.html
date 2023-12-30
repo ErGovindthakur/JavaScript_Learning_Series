@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This toturial will cover all about Local storage in JavaScript</title>
+</head>
+<body>
+    <!-- Local storage used to store the data on the browser -->
+    <script>
+        // It has four method
+
+      /* 1) getItem
+        2) setItem
+        3) localStorage.clear();
+        4) localStorage.removeItem();
+ */
+ let product = {
+            name : 'T-shirt',
+            price : 789, 
+            rating: {
+                stars : 4.5,
+                review: 3434,
+            },
+        };
+
+// localStorage.setItem('Name','Govind');
+// localStorage.setItem('Person','Rich');
+
+// console.log(localStorage.getItem('Name'));
+// localStorage.setItem('product',JSON.stringify(product));
+// console.log(localStorage.getItem('product'));
+// let product2 = JSON.parse(localStorage.getItem('product'));
+// console.log(product2);
+localStorage.removeItem("price");
+localStorage.clear();
+    </script>
+</body>
+</html>

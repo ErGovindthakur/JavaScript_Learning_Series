@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring the concept of JSON (JavaScript Object Notation)</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name : 'T-shirt',
+            price : 789, 
+            rating: {
+                stars : 4.5,
+                review: 3434,
+            },
+        };
+        console.log(product);
+        console.log(typeof product);
+
+        //Creating a varible to convert object in string by json method
+        //Note JSON is a data formate while JS objects are Data Structure
+
+        let str = JSON.stringify(product);
+        // JSON.stringify() This is a method which convert object to strings
+        console.log(str);
+        console.log(typeof str);
+        let obj = JSON.parse(str);
+        // JSON.parse() This method convert string to object
+        console.log(obj);
+        console.log(typeof obj);
+    </script>
+</body>
+</html>
